@@ -11,7 +11,7 @@ const CreateItems = ({ errors, touched, values, status }) => {
     if (status) {
       setItems([...items, status]);
     }
-  }, [status]);
+  }, [status, items]);
   return (
 
 

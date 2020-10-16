@@ -26,7 +26,7 @@ class Display extends Component {
 
 
   toggleFilter = () => {
-    let prevState = this.state;
+    // let prevState = this.state;
 
     let nextState = update(this.state, {
       isFiltered: {$set: !this.state.isFiltered}
@@ -38,7 +38,7 @@ class Display extends Component {
 
   toggleGuestPropertyAt = (property, indexToChange) => {
 
-    let prevState = this.state;
+    // let prevState = this.state;
 
     let nextState = update(this.state.guests, {
         [indexToChange]: {
@@ -64,7 +64,7 @@ class Display extends Component {
 
 
   setNameAt = (text, index) => {
-    let prevState = this.state;
+    // let prevState = this.state;
 
     let nextState = update(this.state.guests, {
       [index]: {
@@ -79,7 +79,7 @@ class Display extends Component {
 
   handleNameInput = (evt) => {
 
-    let prevState = this.state;
+    // let prevState = this.state;
 
     let nextState = update(this.state, {
       pendingGuest: {$set: evt.target.value}
@@ -93,7 +93,7 @@ class Display extends Component {
     evt.preventDefault();
 
 
-    let prevState = this.state;
+    // let prevState = this.state;
     let newGuest = {
       guestname: this.state.pendingGuest,
       guestemail: this.state.pendingGuest,
@@ -113,7 +113,7 @@ class Display extends Component {
 
   removeGuestAt = (index) => {
 
-    let prevState = this.state;
+    // let prevState = this.state;
 
     let nextState = update(this.state.guests, {$splice: [[index, 1]]});
 

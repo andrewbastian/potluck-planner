@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
+import React, { useState } from 'react';
+// import axios from 'axios'
 import Grid from '@material-ui/core/Grid';
 import {
   MuiPickersUtilsProvider,
@@ -7,7 +7,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-import { withStyles } from '@material-ui/core/styles';
+
 
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -20,7 +20,7 @@ import Display from './RSVPcomponents/Display'
 
 const CreateEvent = () => {
 
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+  const [selectedDate, setSelectedDate] = useState(new Date('2014-08-18T21:11:54'));
 
   const handleDateChange = date => {
     setSelectedDate(date);
@@ -56,20 +56,20 @@ const CreateEvent = () => {
     id:''
   });
 
-  useEffect(() => {
-    const addEvent = () => {
-      axios
-      .post(`https://planthepotluck.herokuapp.com/api/events/`,{ 
+  // useEffect(() => {
+  //   const addEvent = () => {
+  //     axios
+  //     .post(`https://planthepotluck.herokuapp.com/api/events/`,{ 
 
-  })
-      .then(res =>{
-        console.log('The response data: ', res.data);
-      })
-      .catch(err =>{
-        console.log('Can not post events data');
-      })
-    }
-  }, [values] )
+  // })
+  //     .then(res =>{
+  //       console.log('The response data: ', res.data);
+  //     })
+  //     .catch(err =>{
+  //       console.log('Can not post events data');
+  //     })
+  //   }
+  // }, [values] )
   return (
     <div>
 

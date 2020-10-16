@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import './App.css'
 import {
-  BrowserRouter,
+  // BrowserRouter,
   Route,
-  Switch
+  // Switch
 } from 'react-router-dom';
 import authenticationActions from './actions/authenticationActions'
 import authenticationService from './services/authenticationService'

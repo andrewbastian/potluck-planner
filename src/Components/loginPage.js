@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import authenticationService from '../services/authenticationService';
 
+const linkColor = {
+  color: 'black', 
+  background:'white',
+  borderRadius: '3px'
+}
+
+const customHead = {
+  backgroundColor: 'black',
+  fontSize: '80px',
+  width: '50%',
+  margin: 'auto',
+  marginTop: '5%',
+  borderRadius: '10px'
+}
+
 class loginPage extends Component {
   constructor() {
     super();
@@ -19,7 +34,7 @@ class loginPage extends Component {
     return (
       <div>
         <div>
-          <h1>Login</h1>
+          <h1 style={customHead}>Login</h1>
           <form onSubmit={this.handleFormSubmit}>
             <input
               className="form-item"
@@ -36,9 +51,11 @@ class loginPage extends Component {
               onChange={this.handleChange}
             />
             <button value="SUBMIT" type="submit">Log In</button>
-            <Link to="/register">Not a member?</Link>
+            <Link to="/register" style={linkColor}>Not a member?</Link>
           </form>
+
         </div>
+
       </div>
     );
   }

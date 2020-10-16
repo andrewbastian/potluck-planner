@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import authenticationService from '../services/authenticationService';
 
+const linkColor = {
+  color: 'black', 
+  background:'white',
+  borderRadius: '3px'
+}
+
+const customHead = {
+  backgroundColor: 'black',
+  fontSize: '80px',
+  width: '50%',
+  margin: 'auto',
+  marginTop: '5%',
+  borderRadius: '10px'
+}
+
 class registerPage extends Component {
 constructor() {
   super();
@@ -47,6 +62,8 @@ handleSubmit(e) {
 render() {
   return (
     <div>
+    <h1 style={customHead}>Register</h1>
+
       <form onSubmit={this.handleSubmit}>
 
 
@@ -58,7 +75,7 @@ render() {
 
         <button value="SUBMIT" type="submit">Sign Up</button>
 
-        <Link to="/login_page">I'm already member</Link>
+        <Link to="/login_page" style={linkColor}>I'm already member</Link>
 
       </form>
     </div>
